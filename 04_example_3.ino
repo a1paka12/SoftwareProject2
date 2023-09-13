@@ -3,7 +3,7 @@ unsigned int count, toggle;
 
 void setup() {
   pinMode(PIN_LED, OUTPUT);
-  Serial.begin(9600);
+  Serial.begin(115200);
   while(!Serial){
     }
 

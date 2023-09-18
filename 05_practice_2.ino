@@ -1,20 +1,16 @@
 #define LED_PIN 7
+bool toggle = 0;
 void setup() {
-  pinMode(LED_PIN, OUTPUT);
-  Serial.begin(9600);
-  
+  pinMode(LED_PIN, OUTPUT); 
 }
 
 void loop(){
-  Serial.println("1");
-  digitalWrite(LED_PIN, LOW);
+  digitalWrite(LED_PIN, toggle);
   delay(1000);
-  for(int i = 0; i < 5; i++)
+  for(int i = 0; i <= 10; i++)
   {
-    Serial.println("write");
-    digitalWrite(LED_PIN, LOW);
-    delay(100);
-    digitalWrite(LED_PIN, HIGH);
+    digitalWrite(LED_PIN, !toggle);
+    toggle = !toggle;
     delay(100);
   }
   while(1){

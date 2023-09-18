@@ -2,8 +2,12 @@
 void setup() {
   pinMode(LED_PIN, OUTPUT);
   Serial.begin(9600);
-  digitalWrite(LED_PIN, HIGH);
+  
+}
+
+void loop(){
   Serial.println("1");
+  digitalWrite(LED_PIN, LOW);
   delay(1000);
   for(int i = 0; i < 5; i++)
   {
@@ -13,7 +17,6 @@ void setup() {
     digitalWrite(LED_PIN, HIGH);
     delay(100);
   }
-}
-
-void loop(){
+  while(1){
+    }
   }
